@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -6441253999486669591}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2b56b8f0fa3a347b708309be063b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 6
 --- !u!95 &549465579
 Animator:
   serializedVersion: 5
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 2
-  timeBetweenAttacks: 0.7
+  timeBetweenAttacks: 0.5
   weaponDamage: 5
 --- !u!114 &5784519763387246626
 MonoBehaviour:
@@ -173,4 +174,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737ba30cfca67fe4a82a17a91e00720e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthPoints: 100

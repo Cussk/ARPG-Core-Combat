@@ -15,7 +15,7 @@ namespace RPG.Combat
         private Mover mover;
         private Animator animator;
         private Health target;
-        private float timeSinceLastAttack = 0;
+        private float timeSinceLastAttack = Mathf.Infinity;
 
         private void Start()
         {
@@ -31,7 +31,7 @@ namespace RPG.Combat
 
             if (!GetIsInRange())
             {
-                mover.MoveTo(target.transform.position);
+                mover.MoveTo(target.transform.position, 1f);
             }
             else
             {
@@ -72,7 +72,7 @@ namespace RPG.Combat
             return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
         }
 
-        public bool CanAttack(CombatTarget combatTarget)
+        public bool CanAttack(GameObject combatTarget)
         {
             if (combatTarget == null) return false;
 
@@ -81,7 +81,7 @@ namespace RPG.Combat
             return targetToTest != null && !targetToTest.IsDead();
         }
 
-        public void StartAttack(CombatTarget combatTarget)
+        public void StartAttack(GameObject combatTarget)
         {
             GetComponent<ActionScheduler>().StartAction(this);
 
@@ -91,7 +91,8 @@ namespace RPG.Combat
         public void Cancel()
         {
             StopAttack();
-            target = null;
+            target = null; 
+            mover.Cancel();
         }
 
         private void StopAttack()

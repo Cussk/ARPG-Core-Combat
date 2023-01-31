@@ -1,4 +1,5 @@
 using RPG.Combat;
+using RPG.Core;
 using RPG.Movement;
 using System;
 using System.Collections;
@@ -11,14 +12,19 @@ namespace RPG.Control
     public class PlayerController : MonoBehaviour
     {
         private Fighter fighter;
+        private Health health;
 
         private void Start()
         {
             fighter = GetComponent<Fighter>();
+            health = GetComponent<Health>();
         }
         private void Update()
         {
+            if (health.IsDead()) return;
+
             if (InteractWithCombat()) return;
+
             if (InteractWithMovement()) return;
         }
 
@@ -29,12 +35,13 @@ namespace RPG.Control
             foreach (RaycastHit raycastHit in listRaycastHit) 
             {
                 CombatTarget combatTarget = raycastHit.transform.GetComponent<CombatTarget>();
+                if (combatTarget == null) continue;
 
-                if (!fighter.CanAttack(combatTarget)) continue;
+                if (!fighter.CanAttack(combatTarget.gameObject)) continue;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
-                    fighter.StartAttack(combatTarget);
+                    fighter.StartAttack(combatTarget.gameObject);
                 }
                 return true;
             }
@@ -51,7 +58,7 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                 {
-                    GetComponent<Mover>().StartMoveAction(raycastHit.point);
+                    GetComponent<Mover>().StartMoveAction(raycastHit.point, 1f);
                 }
                 return true;
             }
