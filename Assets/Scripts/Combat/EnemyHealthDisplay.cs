@@ -20,6 +20,7 @@ namespace RPG.Combat
             if (fighter.GetTarget() == null)
             {
                 enemyHealthText.text = "Enemy: N/A";
+                return;
             }
 
             Health health = fighter.GetTarget();

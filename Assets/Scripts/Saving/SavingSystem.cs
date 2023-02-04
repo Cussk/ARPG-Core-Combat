@@ -39,6 +39,7 @@ namespace RPG.Saving
         private void SaveFile(string saveFile, object state)
         {
             string path = GetPathFromSaveFile(saveFile);
+            print("Saving to " + path);
 
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
@@ -64,7 +65,7 @@ namespace RPG.Saving
             }
         }
 
-        private  void CaptureState(Dictionary<string, object> state)
+        private void CaptureState(Dictionary<string, object> state)
         {
             foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
             {

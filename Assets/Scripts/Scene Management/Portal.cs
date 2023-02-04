@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 
 namespace RPG.SceneManagement
 {
-    enum DestinationIdentifier
-    {
-        A, B, C
-    }
 
     public class Portal : MonoBehaviour
     {
+        enum DestinationIdentifier
+        {
+            A, B, C
+        }
+
         [SerializeField] int sceneToLoad = -1;
         [SerializeField] float fadeOutTime = 1f;
         [SerializeField] float fadeInTime = 2f;

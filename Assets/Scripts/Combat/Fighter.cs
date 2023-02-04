@@ -11,15 +11,15 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] private float timeBetweenAttacks = 1f;
-        [SerializeField] private string defaultWeaponName = "Unarmed";
+        //[SerializeField] private string defaultWeaponName = "Unarmed";
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
-        [SerializeField] Weapon defaultWeapon;
+        [SerializeField] Weapon defaultWeapon = null;
 
         private Mover mover;
         private Animator animator;
         private Health target;
-        private Weapon currentWeapon;
+        private Weapon currentWeapon = null;
         private float timeSinceLastAttack = Mathf.Infinity;
 
         private void Awake()
@@ -96,7 +96,8 @@ namespace RPG.Combat
         public void RestoreState(object state)
         {
             string weaponName = (string)state;
-            Weapon weapon = Resources.Load<Weapon>(defaultWeaponName);
+            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
 
         private void AttackBehaviour()
@@ -125,7 +126,7 @@ namespace RPG.Combat
 
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, gameObject, target);
             }
             else
             {
