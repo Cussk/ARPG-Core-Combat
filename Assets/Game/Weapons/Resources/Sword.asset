@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   weaponDamage: 10
+  percentageBonus: 10
   weaponRange: 2
   isRightHanded: 1
   animatiorOverride: {fileID: 22100000, guid: 46cbb0a00b4f41b4283f7066d17c31e3, type: 2}

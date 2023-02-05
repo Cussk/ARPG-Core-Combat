@@ -14,7 +14,6 @@ namespace RPG.Combat
             if (other.gameObject.tag == "Player")
             {
                 other.GetComponent<Fighter>().EquipWeapon(weapon);
-                Destroy(gameObject);
 
                 StartCoroutine(HideForSeconds(respawnTime));
             }

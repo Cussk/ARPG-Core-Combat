@@ -233,6 +233,17 @@ PrefabInstance:
       propertyPath: characterClass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5159288905345817382, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159288905345817382, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: levelUpParticleEffect
+      value: 
+      objectReference: {fileID: 526577318738762461, guid: dd8935e10c6480845b7d1695eea9420d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa618160c19c4ac41bf22a3f6a2d2b96, type: 3}
 --- !u!4 &5028360004600955917 stripped
