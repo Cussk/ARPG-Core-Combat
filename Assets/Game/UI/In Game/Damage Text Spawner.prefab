@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697304292913677738}
   - component: {fileID: 4193143981988284482}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Damage Text Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

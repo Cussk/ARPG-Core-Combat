@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Bow Blue Projectile
   m_EditorClassIdentifier: 
   weaponDamage: 6
+  percentageBonus: 0
   weaponRange: 10
   isRightHanded: 0
   animatiorOverride: {fileID: 22100000, guid: 01364713404ba9e418142c2be7206592, type: 2}
-  equippedPrefab: {fileID: 6335494463433135144, guid: a6e4eead889ef0a48880dffc3a9accfb,
+  equippedPrefab: {fileID: 1863814911664445932, guid: a6e4eead889ef0a48880dffc3a9accfb,
     type: 3}
   projectile: {fileID: 8405816342452774435, guid: 1416d809649ff15408672a4bcdbcbd7c,
     type: 3}
