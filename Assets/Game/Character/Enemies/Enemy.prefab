@@ -17,10 +17,45 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4063703770835002104}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 856428884679301914, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 856428884679301914, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
@@ -201,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspicionTime: 5
+  aggroCooldownTime: 5
   waypointTolerance: 1
   waypointDwellTime: 3
   patrolSpeedFraction: 0.2
