@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6cae44085fdca47bfaa34951967a81, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  weaponDamage: 10
+  weaponDamage: 15
   percentageBonus: 10
   weaponRange: 2
   isRightHanded: 1

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6cae44085fdca47bfaa34951967a81, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  weaponDamage: 15
+  weaponDamage: 12
+  percentageBonus: 0
   weaponRange: 10
   isRightHanded: 0
   animatiorOverride: {fileID: 22100000, guid: ce7045da5cd9bc34fb55be955e1d0d61, type: 2}

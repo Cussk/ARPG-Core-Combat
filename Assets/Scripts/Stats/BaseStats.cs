@@ -10,13 +10,12 @@ namespace RPG.Stats
     public class BaseStats : MonoBehaviour
     {
         [Range(1, 99)]
-        
+        [SerializeField] private int startingLevel = 1;
         [SerializeField] private bool shouldUseModifiers = false;
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
 
-        private int startingLevel = 1;
         private Experience experience;
 
         public event Action OnLevelUp;

@@ -109,10 +109,50 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4975099425935177840}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RPG.UI.DamageText.DamageTextSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: -674763099532267626, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
       propertyPath: uniqueIndentifier
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 856428884679301914, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1949435934576341214, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
@@ -178,6 +218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459650345057666218, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4647517798545006634, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
@@ -246,6 +291,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa618160c19c4ac41bf22a3f6a2d2b96, type: 3}
+--- !u!114 &4975099425935177840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2764549325157996274, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+    type: 3}
+  m_PrefabInstance: {fileID: 7158115809914203778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a53f0b84f0d69d41afcb6d7f4777dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5028360004600955917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2782924056122272399, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
@@ -300,6 +357,8 @@ MonoBehaviour:
   - type: 4
     texture: {fileID: 2800000, guid: f8c873f1e53e83f4aabf342d6be1dfc3, type: 3}
     hotspot: {x: 0, y: 0}
+  maxNavMeshProjectionDistance: 1
+  raycastRadius: 1
 --- !u!114 &2842322383404022053
 MonoBehaviour:
   m_ObjectHideFlags: 0

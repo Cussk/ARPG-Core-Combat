@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
@@ -29,12 +29,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 4063703770835002104}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 869327877422436853}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
@@ -44,12 +59,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: RPG.Control.AIController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.UI.DamageText.DamageTextSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 856428884679301914, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
@@ -172,6 +202,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4869855209981792864, guid: aa618160c19c4ac41bf22a3f6a2d2b96, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa618160c19c4ac41bf22a3f6a2d2b96, type: 3}
+--- !u!114 &869327877422436853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2764549325157996274, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
+    type: 3}
+  m_PrefabInstance: {fileID: 3048338744501159687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a53f0b84f0d69d41afcb6d7f4777dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &923746390453332974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -6441253999486669591, guid: aa618160c19c4ac41bf22a3f6a2d2b96,
@@ -240,6 +282,7 @@ MonoBehaviour:
   waypointTolerance: 1
   waypointDwellTime: 3
   patrolSpeedFraction: 0.2
+  shoutDistance: 5
   patrolPath: {fileID: 0}
 --- !u!1001 &4259078481072836952
 PrefabInstance:

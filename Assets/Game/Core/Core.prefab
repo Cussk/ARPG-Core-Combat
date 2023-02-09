@@ -318,6 +318,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5029023223224943211, guid: 7734fb70179413a47871867390d62211,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4193143981988284482, guid: 1613bb947eb63e64a98f02312ada05e5,
+        type: 3}
     - target: {fileID: 8672654975861972572, guid: 7734fb70179413a47871867390d62211,
         type: 3}
       propertyPath: m_Name

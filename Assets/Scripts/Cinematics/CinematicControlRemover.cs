@@ -9,7 +9,7 @@ namespace RPG.Cinematics
 {
     public class CinematicControlRemover : MonoBehaviour
     {
-        private GameObject player;
+        private GameObject player = null;
 
         private void Awake()
         {
