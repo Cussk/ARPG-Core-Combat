@@ -1,5 +1,8 @@
 # Point and Click Action RPG
 
+![Screenshot (31)](https://user-images.githubusercontent.com/108804713/217913748-7bc5aa8e-fa6b-48cd-bccd-2495a95a7fca.png)
+
+
 Diablo/Torchwood style ARPG with topdown view and point and click controls.
 
 Part 1: Core Combat Systems -
