@@ -19,6 +19,8 @@ Added character animations from Mixamo and rigged and called them through script
 Systems to be added in the future:
 
 Part 2: Inventory
+
 Part 3: Dialogue and Quests
+
 Part 4: Shops and Abilities
 
