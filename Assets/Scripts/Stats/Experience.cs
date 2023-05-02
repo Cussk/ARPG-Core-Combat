@@ -12,22 +12,26 @@ namespace RPG.Stats
 
         public event Action onExperienceGained;
 
+        //increments experience value
         public void GainExperience(float experience)
         {
             experiencePoints += experience;
             onExperienceGained();
         }
 
+        //getter for experiencePoints variable
         public float GetPoints() 
         { 
             return experiencePoints; 
         }
 
+        //saves value for exp
         public object CaptureState()
         {
             return experiencePoints;
         }
 
+        //loads state from save
         public void RestoreState(object state)
         {
             experiencePoints = (float)state;

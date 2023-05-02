@@ -15,11 +15,13 @@ namespace RPG.Saving
 
         static Dictionary<string, SaveableEntity> globalLookup = new Dictionary<string, SaveableEntity>();
 
+        //Getter unique identifier variable
         public string GetUniqueIndentifier()
         {
             return uniqueIndentifier;
         }
 
+        //saves state to dictionary of each component with the ISaveable interface attached
         public object CaptureState()
         {
 
@@ -32,6 +34,7 @@ namespace RPG.Saving
             return state;
         }
 
+        //loads state of components with ISaveable from dictionary
         public void RestoreState(object state)
         {
             Dictionary<string, object> stateDict = (Dictionary<string, object>)state;
@@ -54,8 +57,10 @@ namespace RPG.Saving
 
             SerializedObject serializedObject = new SerializedObject(this);
 
+            //find unique identifier property
             SerializedProperty property = serializedObject.FindProperty("uniqueIndentifier");
 
+            //assigns new unique identifier if null/empty or is not unique
             if (string.IsNullOrEmpty(property.stringValue) || !IsUnique(property.stringValue))
             {
                 property.stringValue = System.Guid.NewGuid().ToString();
@@ -65,18 +70,21 @@ namespace RPG.Saving
             globalLookup[property.stringValue] = this;
         }
 #endif
+
+        //determines if key is unique
         private bool IsUnique(string candidate)
         {
+            //if key not used yet in globalLookup 
             if (!globalLookup.ContainsKey(candidate)) return true;
-
+            //if key is current candidate
             if (globalLookup[candidate] == this) return true;
-
+            //if candidate null, remove from list
             if (globalLookup[candidate] == null)
             {
                 globalLookup.Remove(candidate);
                 return true;
             }
-
+            //if global lookup candidates unique indentifier is not the current candidate, remove from list
             if (globalLookup[candidate].GetUniqueIndentifier() != candidate)
             {
                 globalLookup.Remove(candidate);

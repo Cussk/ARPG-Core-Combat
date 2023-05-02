@@ -10,11 +10,13 @@ namespace RPG.UI.DamageText
     {
         [SerializeField] TextMeshProUGUI damageText = null;
 
+        //Deletes text object
         public void DestroyText()
         {
             Destroy(gameObject);
         }
 
+        //dynamic string for damage value
         public void SetValue(float amount)
         {
             damageText.text = $"{amount:F0}";

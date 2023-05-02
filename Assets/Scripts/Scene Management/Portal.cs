@@ -12,11 +12,13 @@ namespace RPG.SceneManagement
 
     public class Portal : MonoBehaviour
     {
+        //which portal being used
         enum DestinationIdentifier
         {
             A, B, C
         }
 
+        //variables
         [SerializeField] int sceneToLoad = -1;
         [SerializeField] float fadeOutTime = 1f;
         [SerializeField] float fadeInTime = 2f;
@@ -24,6 +26,7 @@ namespace RPG.SceneManagement
         [SerializeField] Transform spawnPoint;
         [SerializeField] DestinationIdentifier destination;
 
+        //starts coroutine to change scene when player enters trigger area
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player")
@@ -32,6 +35,7 @@ namespace RPG.SceneManagement
             } 
         }
 
+        //Logic to transition scene calling Fader, removing player control, saving data, loads new scene, loads saved data, gets player to desired portal, fades back in, returns player control, destroys previous portal
         private IEnumerator Transition()
         {            
             if (sceneToLoad < 0)
@@ -72,6 +76,7 @@ namespace RPG.SceneManagement
             Destroy(gameObject);
         }
 
+        //disables navmesh, updates player position with warp, rotates player appropriately, enables navmesh 
         private void UpdatePlayer(Portal otherPortal)
         {
             GameObject player = GameObject.FindWithTag("Player");
@@ -85,6 +90,7 @@ namespace RPG.SceneManagement
             player.GetComponent<NavMeshAgent>().enabled = true;
         }
 
+        //gets the destination portal
         private Portal GetOtherPortal()
         {
             foreach (Portal portal in FindObjectsOfType<Portal>())

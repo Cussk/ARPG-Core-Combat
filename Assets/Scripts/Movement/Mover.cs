@@ -26,6 +26,7 @@ namespace RPG.Movement
 
         private void Update()
         {
+            //enable navMesh if player not dead
             navMeshAgent.enabled = !health.IsDead();
 
             UpdateAnimator();

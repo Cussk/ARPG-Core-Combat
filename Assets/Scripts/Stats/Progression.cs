@@ -5,13 +5,16 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
+    //create menu item in Unity inspector
     [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
+        //array for character classes
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
         Dictionary<CharacterClass, Dictionary<Stat, float[]>> lookupTable = null;
 
+        //Gets stat from dictionary returns
         public float GetStat(Stat stat, CharacterClass characterClass, int level) 
         {
             BuildLookup();
@@ -26,6 +29,7 @@ namespace RPG.Stats
             return levels[level - 1];
         }
 
+        //Gets levels from dictionary
         public int GetLevels(Stat stat, CharacterClass characterClass)
         {
             BuildLookup();
@@ -35,6 +39,7 @@ namespace RPG.Stats
             return levels.Length;
         }
 
+        //accesses each dicitionary value for classes, stats and levels
         private void BuildLookup()
         {
             if (lookupTable != null) return;
@@ -54,6 +59,7 @@ namespace RPG.Stats
             }
         }
 
+        //makes characterClass Stat avaialble in inspector and editable
         [System.Serializable]
         class ProgressionCharacterClass
         {
@@ -61,6 +67,7 @@ namespace RPG.Stats
             public ProgressionStat[] stats;
         }
 
+        //makes levels Stat avaialble in inspector and editable
         [System.Serializable]
         public class ProgressionStat
         {

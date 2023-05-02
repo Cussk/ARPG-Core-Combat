@@ -13,11 +13,13 @@ namespace RPG.Stats
 
         private void Awake()
         {
+            //get player game object
             playerBaseStats = GameObject.FindWithTag("Player").GetComponent<BaseStats>();
         }
 
         private void Update()
         {
+            //dynamic text player current level
             levelText.text = $"Level: {playerBaseStats.GetLevel():F0}";
         }
     }

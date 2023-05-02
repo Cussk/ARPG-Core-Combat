@@ -49,6 +49,7 @@ namespace RPG.Stats
             }
         }
 
+        //Updates character level on Level up
         private void UpdateLevel()
         {
             int newLevel = CalculateLevel();
@@ -61,21 +62,25 @@ namespace RPG.Stats
             }
         }
 
+        // Getter for stats, combining base and add modifier multiplied by percentage modifiers
         public float GetStat(Stat stat)
         {
             return (GetBaseStat(stat) + GetAdditiveModifier(stat)) * (1 + GetPercentageModifier(stat)/100);
         }
 
+        //Getter for current level value
         public int GetLevel()
         {
             return currentLevel.value;
         }
 
+        //Getter for base stats based on which stat, character class, and current level
         private float GetBaseStat(Stat stat)
         {
             return progression.GetStat(stat, characterClass, GetLevel());
         }
 
+        //increments modifiers for each additive boost to stat returns total
         private float GetAdditiveModifier(Stat stat)
         {
             if (!shouldUseModifiers) return 0;
@@ -91,6 +96,7 @@ namespace RPG.Stats
             return total;
         }
 
+        //increments modifiers for each percentage boost to stat returns total
         private float GetPercentageModifier(Stat stat)
         {
             if (!shouldUseModifiers) return 0;
@@ -106,17 +112,20 @@ namespace RPG.Stats
             return total;
         }
 
-
+        //Calculate level based on EXP
         private int CalculateLevel()
         {
             Experience experience = GetComponent<Experience>();
 
+            //if no EXP return set starting level
             if (experience == null) return startingLevel;
 
             float currentEXP = experience.GetPoints();
 
+            //variable for second to last level
             int penultimateLevel = progression.GetLevels(Stat.ExperienceToLevelUp, characterClass);
 
+            //increase level if EXP requirements met, for every level below max
             for (int level = 1; level <= penultimateLevel; level++)
             {
                 float EXPToLevelUP = progression.GetStat(Stat.ExperienceToLevelUp, characterClass, level);
@@ -127,9 +136,11 @@ namespace RPG.Stats
                 }
             }
 
+            //return max level
             return penultimateLevel + 1;
         }
 
+        //spawns visual effect
         private void LevelUpEffect()
         {
             Instantiate(levelUpParticleEffect, transform);

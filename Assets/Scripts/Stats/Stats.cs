@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
+    //enum for available stats
     public enum Stat
     {
         Health,

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
+    //enum of available character classes 
     public enum CharacterClass
     {
         Player,

@@ -16,6 +16,7 @@ namespace RPG.SceneManagement
             StartCoroutine(LoadLAstScene());
         }
 
+        //Loads scene from last save
         private IEnumerator LoadLAstScene()
         {
             yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
@@ -43,16 +44,19 @@ namespace RPG.SceneManagement
 
         }
 
+        //calls load from Saving System
         public void Load()
         {
             GetComponent<SavingSystem>().Load(defaultSaveFile);
         }
 
+        //calls save from Saving System
         public void Save()
         {
             GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
 
+        //calls delete from Saving System
         public void Delete()
         {
             GetComponent<SavingSystem>().Delete(defaultSaveFile);
